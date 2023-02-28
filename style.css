@@ -5,11 +5,13 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: black;
+  
 }
 
+
+
 #game-board {
-    background-color: #ccc;
+    background-color:#E1C699 ;
     width: 100vmin;
     height: 100vmin;
     display: grid;
@@ -18,11 +20,11 @@ body {
 }
 
 .snake {
-    background-color: hsl(200, 100%, 50%);
-    border: .25vmin solid black;
+    background-color:#4e3a33;
+    border: .25vmin solid #E1C699;
 }
 
 .food {
-    background-color: hsl(50, 100%, 50%);
-    border: .25vmin solid black;
+    background-color: #9a774f;
+    border: .25vmin solid #4e3a33;
 }
