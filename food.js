@@ -9,6 +9,7 @@ export function update() {
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
   }
+
 }
 
 export function draw(gameBoard) {
@@ -18,6 +19,16 @@ export function draw(gameBoard) {
   foodElement.classList.add('food')
   gameBoard.appendChild(foodElement)
 }
+
+
+
+if (onSnake(food)) {
+  expandSnake(EXPANSION_RATE)
+  food = getRandomFoodPosition()
+  var audio = new Audio('pop-39222.mp3');
+  audio.play();
+}
+
 
 function getRandomFoodPosition() {
   let newFoodPosition

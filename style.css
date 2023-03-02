@@ -27,4 +27,5 @@ body {
 .food {
     background-color: #9a774f;
     border: .25vmin solid #4e3a33;
+    background-image: url('img/apple.png');
 }
