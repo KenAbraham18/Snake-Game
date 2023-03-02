@@ -3,9 +3,15 @@ import { randomGridPosition } from './grid.js'
 
 let food = getRandomFoodPosition()
 const EXPANSION_RATE = 1
+var audio = document.getElementById("myAudio"); 
 
 export function update() {
   if (onSnake(food)) {
+    console.log("AUDIO");
+    setTimeout(() => {
+      console.log("Delayed for 1 second.");
+    }, "0")
+  audio.play();
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
   }
@@ -21,13 +27,11 @@ export function draw(gameBoard) {
 }
 
 
-
-if (onSnake(food)) {
-  expandSnake(EXPANSION_RATE)
-  food = getRandomFoodPosition()
-  var audio = new Audio('pop-39222.mp3');
-  audio.play();
-}
+// if (onSnake(food)) {
+  
+//   expandSnake(EXPANSION_RATE)
+//   food = getRandomFoodPosition()
+// }
 
 
 function getRandomFoodPosition() {

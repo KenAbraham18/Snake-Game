@@ -5,11 +5,15 @@ import { outsideGrid } from './grid.js'
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
-
 function main(currentTime) {
   if (gameOver) {
     if (confirm('You lost. Press ok to restart.')) {
       window.location = '/'
+      var audio = new audio('music/weirdo-scream-6714.mp3');
+      setTimeout(() => {
+        console.log("Delayed for 0 second.");
+      }, "0")
+      audio.play();
     }
     return
   }
